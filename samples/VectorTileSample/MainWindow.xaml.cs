@@ -11,7 +11,7 @@ namespace VectorTileSample
     public partial class MainWindow
     {
         readonly HttpVectorTileSource _httpVectorTileSource;
-        readonly TileLayer _vectorTileLayer;
+        readonly ILayer _vectorTileLayer;
         public MainWindow()
         {
             InitializeComponent();
@@ -19,7 +19,11 @@ namespace VectorTileSample
             MapControl.Map.Layers.Add(new TileLayer(KnownTileSources.Create()) { Name = "OpenStreetMap"});
 
             _httpVectorTileSource = CreateVectorTileTileSource();
+            // FUTURE_httpVectorTileSource = new HttpTileSource (new GlobalSphericalMercator(), "https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.mvt?api_key=mapzen-tnjqimH");
+
             _vectorTileLayer = new TileLayer(_httpVectorTileSource) { Opacity = 0.5, Name = "Mapzen vector tiles"};
+            // FUTURE: _vectorTileLayer = new VectorTileLayer(_httpVectorTileSource);
+
             MapControl.Map.Layers.Add(_vectorTileLayer);
 
             MapsuiLayerList.Initialize(MapControl.Map.Layers);
