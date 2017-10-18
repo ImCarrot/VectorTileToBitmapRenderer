@@ -1,4 +1,5 @@
 ﻿using Mapsui;
+using Mapsui.Layers;
 
 namespace VectorTileSample
 {

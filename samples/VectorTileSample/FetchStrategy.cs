@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using BruTile;
 using Mapsui.Fetcher;
+using Mapsui.Geometries.Utilities;
 using Mapsui.Utilities;
 
 namespace VectorTileSample

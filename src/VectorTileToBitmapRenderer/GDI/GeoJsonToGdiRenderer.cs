@@ -79,7 +79,7 @@ namespace VectorTileToBitmapRenderer
 
             foreach (var coordinate in lineString.Coordinates)
             {
-                var position = (GeographicPosition) coordinate;
+                var position = (GeographicPosition)coordinate;
                 result.Add(SphericalMercator.FromLonLat(position.Longitude, position.Latitude));
             }
             return result.ToArray();

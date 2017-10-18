@@ -33,7 +33,7 @@ namespace VectorTileSample
         {
             return new HttpVectorTileSource(
                 new GlobalSphericalMercator(),
-                "https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.mvt?api_key=mapzen-tnjqimH",
+                  "http://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.mvt?api_key=mapzen-tnjqimH",
                 name: "vector tile");
         }
 
